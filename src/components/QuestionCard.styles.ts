@@ -1,13 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  max-width: 1100px;
-  background: #ebfeff;
-  border-radius: 10px;
-  border: 2px solid #0085a3;
-  padding: 20px;
+  width: 90%;
+  background-color: white;
+  padding: 15px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
+  text-align: left;
   p {
     font-size: 1rem;
   }
@@ -20,26 +18,42 @@ type ButtonWrapperProps = {
 
 export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   transition: all 0.3s ease;
-  :hover {
-    opacity: 0.8;
-  }
+  height: 50px;
+  padding: 5px;
+
   button {
     cursor: pointer;
     user-select: none;
     font-size: 0.8rem;
-    width: 100%;
+    width: 40px;
     height: 40px;
+    float: left;
     margin: 5px 0;
     background: ${({ correct, userClicked }) =>
       correct
-        ? 'linear-gradient(90deg, #56FFA4, #59BC86)'
+        ? "linear-gradient(0deg, #08AEEA 0%, #2AF598 100%)"
         : !correct && userClicked
-        ? 'linear-gradient(90deg, #FF5656, #C16868)'
-        : 'linear-gradient(90deg, #56ccff, #6eafb4)'};
+        ? "linear-gradient(147deg, #FFE53B 0%, #FF2525 74%)"
+        : "linear-gradient(43deg, #000000 0%, #797979 46%, #a6a6a6 100%)"};
     border: 3px solid #ffffff;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     color: #fff;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  }
+  button:hover {
+    background: ${({ userClicked }) =>
+      !userClicked ? "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)" : null};
+  }
+  small {
+    float: left;
+    color: ${({ correct, userClicked }) =>
+      correct ? "red" : !correct && userClicked ? "green" : "white"};
+    margin: 14.5px;
+  }
+  
+  p {
+    float: left;
+    margin: 15px;
   }
 `;

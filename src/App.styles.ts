@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -14,6 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   * {
     font-family: 'Catamaran', sans-serif;
@@ -23,19 +24,39 @@ export const GlobalStyle = createGlobalStyle`
 
 export const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px;
   > p {
     color: #fff;
   }
+
+  @media screen and (max-width: 1440px) {
+    width: 1024px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 800px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 425px;
+  }
+  @media screen and (max-width: 425px) {
+    width: 375px;
+  }
+  @media screen and (max-width: 375px) {
+    width: 320px;
+  }
+
   .score {
-    color: #fff;
+    color: #000;
     font-size: 2rem;
     margin: 0;
   }
   h1 {
     font-family: Fascinate Inline;
-    background-image: linear-gradient(180deg, #fff, #87f1ff);
+    background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
     font-weight: 400;
     background-size: 100%;
     background-clip: text;
@@ -48,10 +69,12 @@ export const Wrapper = styled.div`
     text-align: center;
     margin: 20px;
   }
-  .start, .next {
+  .start,
+  .next {
     cursor: pointer;
-    background: linear-gradient(180deg, #ffffff, #ffcc91);
-    border: 2px solid #d38558;
+    background: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+    color: white;
+    border: none;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     height: 40px;

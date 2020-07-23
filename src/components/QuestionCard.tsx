@@ -21,7 +21,7 @@ export const QuestionCard: React.FC<Props> = ({
   return (
     <Wrapper>
       <p className="number">
-        Question: {questionNumber} / {totalQuestions}
+        Question: {questionNumber} out of {totalQuestions}
       </p>
       <p dangerouslySetInnerHTML={{ __html: question }}></p>
       <div>
@@ -35,9 +35,10 @@ export const QuestionCard: React.FC<Props> = ({
               disabled={!!selectedAnswer}
               value={answer}
               onClick={callback}
-            >
-              <span dangerouslySetInnerHTML={{ __html: answer }}></span>
-            </button>
+            ></button>
+            <p dangerouslySetInnerHTML={{ __html: answer }}>
+            </p>
+            <small></small>
           </ButtonWrapper>
         ))}
       </div>

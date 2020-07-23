@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import image from './background.jpg'
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -6,8 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
   body {
-    background-image: url("https://source.unsplash.com/random");
+    background-image: url(${image});
     background-size: cover;
+    backgground-attachment: fixed;
     width: 100%;
     height: 100%;
     margin: 0;

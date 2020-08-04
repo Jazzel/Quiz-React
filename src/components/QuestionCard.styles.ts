@@ -9,6 +9,33 @@ export const Wrapper = styled.div`
   p {
     font-size: 1rem;
   }
+  .result {
+    text-align: center;
+    font-size: 30px;
+    filter: none;
+  }
+  .black {
+    background-image: linear-gradient(
+      43deg,
+      #000000 0%,
+      #797979 46%,
+      #000000 100%
+    );
+    font-weight: 600 !important;
+  }
+  .red {
+    background-image: linear-gradient(
+      43deg,
+      red 0%,
+      #ff2505 46%,
+      red 100%
+    );
+    font-weight: 600 !important;
+  }
+  .green {
+    background-image: linear-gradient(43deg, #08aeea 0%, #08aeea 100%);
+    font-weight: 600 !important;
+  }
 `;
 
 type ButtonWrapperProps = {
@@ -51,7 +78,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
       correct ? "red" : !correct && userClicked ? "green" : "white"};
     margin: 14.5px;
   }
-  
+
   p {
     float: left;
     margin: 15px;

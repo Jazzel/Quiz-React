@@ -14,4 +14,9 @@ interface AnswerObject {
   correctAnswer: string;
 }
 
+interface Categories {
+  id: number;
+  name: string;
+}
+
 type QuestionState = Question & { answers: string[] };
